@@ -1,0 +1,265 @@
+---
+
+---
+
+<style is:inline>
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 81px 122px 81px 122px;
+    background-color: #000;
+    color: white;
+    margin-top: 100px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.button-primary-with {
+    padding: 12px 40px;
+    background-color: white;
+    color: black;
+    border-radius: 60px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logo-compipro-wrapper img {
+    width: 240px;
+    height: auto;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin: 30px 0;
+}
+
+.footer-widgets {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+.widget {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subtitulo-footer {
+    width: 126px;
+    font-family: var(--bold-16px-font-family);
+    font-weight: var(--bold-16px-font-weight);
+    color: #ffffff;
+    font-size: var(--bold-16px-font-size);
+    letter-spacing: var(--bold-16px-letter-spacing);
+    line-height: var(--bold-16px-line-height);
+    font-style: var(--bold-16px-font-style);
+}
+
+
+.descripcion-footer {
+    color: #ffffff;
+    font-family: var(--regular-13px-font-family);
+    font-style: var(--regular-13px-font-style);
+    font-weight: var(--regular-13px-font-weight);
+    letter-spacing: var(--regular-13px-letter-spacing);
+    line-height: var(--regular-13px-line-height);
+    font-size: var(--regular-13px-font-size);
+}
+
+.link-footer {
+    color: #ffffff;
+    text-decoration: underline;
+    font-family: var(--regular-13px-font-family);
+    font-style: var(--regular-13px-font-style);
+    font-weight: var(--regular-13px-font-weight);
+    letter-spacing: var(--regular-13px-letter-spacing);
+    line-height: var(--regular-13px-line-height);
+    font-size: var(--regular-13px-font-size);
+}
+
+.seccions-footer {
+    font-family: "Plus Jakarta Sans-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 2.5;
+}
+
+
+
+.frame-2 {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+}
+
+i {
+    color: white;
+    /* Color de los iconos */
+    font-size: 30px;
+    /* Tamaño */
+    margin: 10px;
+    /* Espaciado */
+    transition: color 0.3s ease;
+    /* Efecto suave */
+}
+
+i:hover {
+    color: #f39c12;
+    /* Cambia de color al pasar el mouse */
+}
+
+.link-item {
+    display: block; /* Hace que cada enlace esté en su propia línea */
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit; /* Mantiene el color del texto original */
+    margin-bottom: 5px; /* Espaciado entre enlaces */
+}
+
+.link-item:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+    color: #007bff; /* Cambia el color al hacer hover (opcional) */
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        padding: 60px 80px;
+    }
+
+    .logo-compipro-wrapper img {
+        width: 200px;
+    }
+
+    .button-primary-with {
+        padding: 10px 30px;
+    }
+
+    .footer-widgets {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 40px;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-widgets {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .frame-2 {
+        justify-content: center;
+    }
+
+    .subtitulo-footer {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 20px 20px;
+    }
+
+    .logo-compipro-wrapper img {
+        width: 150px;
+    }
+
+    .button-primary-with {
+        padding: 8px 20px;
+    }
+
+    .footer-widgets {
+        gap: 10px;
+    }
+
+    .subtitulo-footer {
+        text-align: center;
+    }
+}
+</style>
+
+<footer class="bg-dark text-white py-5">
+        <div class="container">
+            <!-- Logo y botón -->
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 text-center">
+                <img src="/images/logofooter.webp" alt="Logo Compipro" class="img-fluid"
+                    style="max-width: 240px;">
+                <button class="btn btn-light fw-bold px-4 py-2 rounded-pill mt-3 mt-md-0">Contáctanos</button>
+            </div>
+
+            <!-- Línea divisoria -->
+            <hr class="bg-white">
+
+            <!-- Sección de widgets -->
+            <div class="row text-center text-md-start">
+                <!-- Widget 1: Sobre Compipro -->
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold">Sobre Compipro</h5>
+                    <p class="small">© 2025 COMPIPRO S.A.C. - Soluciones en artículos publicitarios y merchandising
+                        empresarial. Creatividad, calidad y puntualidad para potenciar tu marca.</p>
+                    <p class="small">Visítanos en <a href="https://compipro.com" target="_blank"
+                            class="text-white text-decoration-underline">compipro.com</a></p>
+                    <p class="small">Contacto: ventas@compipro.net</p>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3">
+                        <i class="fa-brands fa-facebook fs-3"></i>
+                        <i class="fa-brands fa-instagram fs-3"></i>
+                        <i class="fa-brands fa-linkedin fs-3"></i>
+                        <i class="fa-brands fa-pinterest fs-3"></i>
+                    </div>
+                </div>
+
+                <!-- Widget 2: Company -->
+                <div class="col-md-3 mb-4 footer-seccion">
+                    <h5 class="fw-bold">Líneas Principales</h5>
+                    <p class="small">
+                        <a href="URL1" class="link-item">Línea Madera</a>
+                        <a href="URL2" class="link-item">Publicidad Exterior</a>
+                        <a href="URL3" class="link-item">Uniformes Corporativos</a>
+                        <a href="URL4" class="link-item">Accesorios Tecnológicos</a>
+                    </p>
+                    
+                </div>
+
+                <!-- Widget 3: Help -->
+                <div class="col-md-3 mb-4 footer-seccion">
+                    <h5 class="fw-bold">Contacto</h5>
+                    <p class="small">
+                        <a href="URL1" class="link-item">contacto@merchmaster.com</a>
+                        <a href="URL2" class="link-item">+51 123 456 789</a>
+                        <a href="URL3" class="link-item">Av. Principal 123, Lima</a>
+                    </p>
+                </div>
+
+                <!-- Widget 4: Resources -->
+                <div class="col-md-3 mb-4 footer-seccion">
+                    <h5 class="fw-bold">Redes Sociales</h5>
+                    <div class="frame-2">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-pinterest"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>

@@ -1,0 +1,181 @@
+
+		* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media (max-width: 374px) {
+    /* .hero {
+        height: 250px;
+    }
+
+    .hero img {
+        height: 250px;
+    } */
+
+    .text {
+        width: 40% !important;
+    }
+
+    .text h2 {
+        width: fit-content;
+        font-size: 0.7rem;
+    }
+
+    .text p {
+        width: fit-content;
+        font-size: 0.6rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .fw-bold {
+        font-size: 1rem;
+    }
+
+    .titulo {
+        font-size: 1.1rem;
+    }
+
+    .slider {
+        --width: 60px;
+        --height: 50px;
+    }
+
+    .text-seccion {
+        font-size: 0.8rem;
+    }
+
+    .footer-seccion {
+        display: none;
+    }
+}
+
+/* Para dispositivos móviles pequeños (320px - 768px) */
+@media (min-width: 375px) and (max-width: 768px) {
+    .hero {
+        width: auto;
+        /* height: 310px; */
+        object-fit: fill;
+    }
+
+    /* .hero img {
+        height: 310px;
+    } */
+
+    .text {
+        width: 40% !important;
+    }
+
+    .text h2 {
+        width: fit-content;
+        font-size: 0.8rem;
+    }
+
+    .text p {
+        width: fit-content;
+        font-size: 0.7rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .fw-bold {
+        font-size: 1rem;
+    }
+
+    .titulo {
+        font-size: 1.3rem;
+    }
+
+    .slider {
+        --width: 80px;
+        --height: 60px;
+    }
+
+    .footer-seccion {
+        display: none;
+    }
+}
+
+/* Para tablets y pantallas medianas (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero {
+        width: auto;
+        /* height: 500px; */
+        object-fit: fill;
+    }
+
+    .text {
+        width: 40% !important;
+    }
+
+    .text h2 {
+        width: fit-content;
+        font-size: 1.5rem;
+    }
+
+    .text p {
+        width: fit-content;
+        font-size: 0.7rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.8rem;
+    }
+
+    .fw-bold {
+        font-size: 0.9rem;
+    }
+
+    .slider {
+        --width: 100px;
+        --height: 80px;
+    }
+
+    .card-img-top {
+        width: auto;
+        height: 230px;
+    }
+}
+
+/* Para laptops y pantallas grandes (1025px en adelante) */
+@media (min-width: 1025px) {
+    /* .hero {
+        height: 100vh;
+    } */
+
+    .hero .text {
+        width: 40%;
+        font-size: 18px;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+    }
+
+    .fw-bold {
+        font-size: 1rem;
+    }
+
+    .slider {
+        --width: 150px;
+        --height: 125px;
+    }
+
+    .card-img-top {
+        width: auto;
+        height: 300px;
+    }
+}

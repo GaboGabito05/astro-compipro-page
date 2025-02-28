@@ -1,0 +1,21 @@
+---
+
+import Hero from '@components/Hero.astro';
+import Layout from '../layouts/Layout.astro';
+import Productos from '@components/Productos.astro';
+import Valores from '@components/Valores.astro';
+import Clientes from '@components/Clientes.astro';
+import Carrusel from '@components/Carrusel.astro';
+import Diferenciadores from '@components/Diferenciadores.astro';
+
+---
+
+<Layout>
+	<Hero image="/images/imagenhero1.webp" carousel= {true}/>
+    <Productos/>
+    <Valores/>
+    <Clientes/>
+    <Carrusel/>
+    <Diferenciadores/>
+</Layout>
+

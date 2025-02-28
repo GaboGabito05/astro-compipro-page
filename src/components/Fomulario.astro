@@ -1,0 +1,135 @@
+<style is:inline>
+     .contact-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            max-width: 1100px;
+            display: flex;
+            position: relative;
+        }
+
+        .contact-form {
+            padding: 40px;
+            background: white;
+            border-radius: 20px 0 0 20px;
+            flex: 1;
+            min-width: 50%;
+        }
+
+        .map-wrapper {
+            position: relative;
+            flex: 1;
+            min-width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 42px 42px 42px 0;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 100%;
+            border-radius: 0 20px 20px 0;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 0 20px 20px 0;
+        }
+
+        .orange-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 25%;
+            height: 100%;
+            background: #e87e04;
+            border-radius: 0 20px 20px 0;
+        }
+
+        @media (max-width: 992px) {
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-form,
+            .map-wrapper {
+                border-radius: 20px;
+                padding: 0 40px 40px 40px;
+            }
+
+            .map-container iframe {
+                border-radius: 20px;
+            }
+
+            .map-container {
+                height: 400px;
+            }
+
+            .orange-bg {
+                display: none;
+            }
+        }
+</style>
+
+<section class="container contact-section">
+    <h2 class="titulo">POTENCIAMOS TU CRECIMIENTO</h2>
+    <div class="contact-container w-100 mt-4">
+
+        <div class="orange-bg"></div>
+        <div class="contact-form">
+            <h4><strong>¿Solicita una <span class="text-success">cotización</span>?</strong></h4>
+            <p>Puedes ponerte en contacto con nosotros en cualquier momento a través de <a
+                    href="mailto:ventas@compipro.net" class="text-primary">ventas@compipro.net</a></p>
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Nombre de contacto">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Calle">
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control" placeholder="Ciudad">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control" placeholder="Código postal">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Teléfono de contacto">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Correo electrónico">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="3" placeholder="Háblenos de su idea"></textarea>
+                </div>
+                <div class="mb-3">
+                    <input type="file" class="form-control">
+                    <small class="text-muted">Tamaño máximo del archivo: 10MB</small>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">SUBMIT</button>
+            </form>
+        </div>
+        <div class="map-wrapper">
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975.7269537248984!2d-76.95927815022243!3d-12.016348448532601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c60cf36f8e9b%3A0x3f232688d4085c1b!2sAv.%20Las%20Flores%20de%20Primavera%20184%2C%20San%20Juan%20de%20Lurigancho%2C%20Per%C3%BA!5e0!3m2!1ses-419!2s!4v1708000000000!5m2!1ses-419!2s"
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
