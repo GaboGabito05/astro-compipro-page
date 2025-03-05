@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
         description: "Diseño personalizado para publicidad y branding.",
       },
       {
-        src: "images/imagenhero5.webp",
-        title: "llll",
-        description: "aaaaadddddd",
+        src: "/images/imagenhero5.webp",
+        title: "Merchandising Empresarial",
+        description: "Diseño de articulos publicitarios para empresas.",
       },
     ];
 
