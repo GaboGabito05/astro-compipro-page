@@ -1,0 +1,41 @@
+---
+import "../styles/NuestrosValores.css";
+
+const data = [
+  {
+    icon: "🎨",
+    title: "Creatividad",
+    description: "Buscamos soluciones innovadoras y únicas para cada desafío.",
+  },
+  {
+    icon: "⏰",
+    title: "Puntualidad",
+    description: "Cumplimos con nuestros compromisos en el tiempo acordado.",
+  },
+  {
+    icon: "✅",
+    title: "Calidad",
+    description: "Nos comprometemos con la excelencia en cada servicio.",
+  },
+  {
+    icon: "👥",
+    title: "Atención",
+    description: "Brindamos un servicio personalizado y cercano.",
+  },
+];
+---
+
+<section class="values-section">
+    <div class="container">
+      <h2 class="section-title">Nuestros Valores</h2>
+      <div class="values-grid">
+        {data.map((value) => (
+          <div class="value-card">
+            <div class="value-icon">{value.icon}</div>
+            <h3>{value.title}</h3>
+            <p>{value.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>

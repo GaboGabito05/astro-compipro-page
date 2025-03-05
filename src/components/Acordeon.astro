@@ -1,0 +1,46 @@
+---
+import '../styles/FAQS.css';
+
+// Definir el array de preguntas y respuestas
+const faqsData = [
+  {
+    question: "¿Qué servicios ofrece CompiPro S.A.C.?",
+    answer: "Ofrecemos soluciones integrales de tecnología, incluyendo desarrollo de software, consultoría IT y servicios de transformación digital."
+  },
+  {
+    question: "¿Cómo trabajan con sus clientes?",
+    answer: "Nos enfocamos en un enfoque personalizado, colaborativo y centrado en las necesidades específicas de cada cliente."
+  },
+  {
+    question: "¿Cuál es su área de cobertura?",
+    answer: "Trabajamos a nivel nacional, con capacidad para atender proyectos en diferentes regiones y sectores."
+  },
+  {
+    question: "¿Cuánto tiempo llevan en el mercado?",
+    answer: "Contamos con más de 5 años de experiencia, ofreciendo soluciones innovadoras a empresas de diversos sectores."
+  },
+  {
+    question: "¿Cómo puedo solicitar una cotización?",
+    answer: "Puede contactarnos a través de nuestro formulario web, correo electrónico o número telefónico. Nos pondremos en contacto a la brevedad."
+  }
+];
+---
+
+<section class="faqs-section">
+    <div class="container">
+        <h2 class="section-title text-center">Preguntas Frecuentes</h2>
+        <div class="faqs-accordion">
+            {faqsData.map((faq) => (
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>{faq.question}</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>{faq.answer}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,27 @@
+---
+import "../styles/QuienesSomos.css";
+
+const data = [
+  {
+    title: "¿Quienes Somos?",
+    content: "COMPIPRO S.A.C es tu mejor opción. Somos una empresa peruana dedica a la oferta de artículos y productos publicitarios de alta calidad y diseño para eventos, ferias, regalos corporativos y para la industria en general. Contamos con infraestructura propia y trabajamos con “Partners Estratégicos” a nivel nacional e internacional, los cuales nos permiten brindar servicios con mayor calidad, rapidez y garantía a costos muy competitivos.",
+    image: "./images/compipro-img.png",
+  },
+];
+---
+
+<section class="about-section">
+  <div class="container">
+    <h2 class="section-title">{data[0].title}</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          {data[0].content}
+        </p>
+      </div>
+      <div class="about-image">
+        <img src={data[0].image} alt="Logo CompiPro Empresa" />
+      </div>
+    </div>
+  </div>
+</section>

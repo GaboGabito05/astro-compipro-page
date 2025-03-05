@@ -87,15 +87,15 @@
       },
       {
         src: "images/imagenhero5.webp",
-        title: "llll",
-        description: "aaaaadddddd",
+        title: "Merchandising Empresarial",
+        description: "Diseño de articulos publicitarios para empresas.",
       },
     ];
 
     let index = 0;
 
     function changeImage() {
-      heroImage.style.opacity = 0; // Oculta la imagen
+      heroImage.style.opacity = "0"; // Oculta la imagen
       setTimeout(() => {
         index = (index + 1) % images.length; // Cicla entre imágenes
         heroImage.src = images[index].src;

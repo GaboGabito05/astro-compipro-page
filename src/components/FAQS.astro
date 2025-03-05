@@ -1,0 +1,28 @@
+---
+import '../styles/FAQS.css';
+
+const data = [
+    {
+        "title": "FAQs",
+        "content1": "Aquí encontrarás respuestas a las preguntas más comunes sobre nuestros servicios y empresa. Si no encuentras lo que buscas, no dudes en contactarnos.",
+        "content2": "Estamos comprometidos con brindar la información más clara y útil para nuestros clientes.",
+        "image": "https://s3-alpha-sig.figma.com/img/c688/8526/e689b7855db720240017da040144fae5?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=TmOZ2kddhneIETogOUdoz0juLs9kFaWkNJx0yeR2vXkrnqrupuFAGrtGeKX9J2QcTTTIJ6xcSfDp-kjMeqsxLNY1RXYVGeo8EucuOWgN2LFDXCawlp6eaZDxqutk9knPt2aqqX2QKPBfG0idNXXocdNDNno~5P98ch8H3Q3PIGTSrbBv~guGBbEFFECpoFb4BNidtCRXqa7scumxCimosMpQvmQ6SMv1MqPLNkbPQy1Oqc-g7t8wq71WzC02I1J3VyNp0-Qa4NhHhvK6YCXXAHfUfHdMhDMMiUgrg-~3eKRMb2w5WIpD6GeA9OyMgTCOTuU-JbKBnHcCqfhyJXKpYA__",
+    }
+]
+--- 
+<section class="faqs-section">
+    <div class="container">
+        <div class="faqs-content">
+            <div class="faqs-text">
+                <h2 class="section-title">{data[0].title}</h2>
+                <div class="faqs-description">
+                    <p>{data[0].content1}</p>
+                    <p>{data[0].content2}</p>
+                </div>
+            </div>
+            <div class="faqs-image">
+                <img src={data[0].image} alt="CompPro Empresa FAQs">
+            </div>
+        </div>
+    </div>
+</section>
