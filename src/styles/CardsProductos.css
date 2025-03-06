@@ -1,0 +1,76 @@
+/* Product Grid Styles - Ensuring 3 cards horizontally */
+.product-grid {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    flex: 0 1 calc(33.333% - 2rem);
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #3b3939f6;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem; 
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15), 0 6px 10px rgba(0,0,0,0.1);
+    border-color: #ff7e15;
+}
+
+.product-card img {
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.product-card p {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.quote-button {
+    background-color: #ff7e15;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quote-button:hover {
+    background-color: #ff7e15;
+}
+
+/* Responsive Media Queries for Product Cards */
+@media screen and (max-width: 768px) {
+    .product-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+}
