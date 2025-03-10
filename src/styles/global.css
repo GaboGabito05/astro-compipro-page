@@ -1,9 +1,9 @@
-
-		* {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 @media (max-width: 374px) {
     /* .hero {
         height: 250px;
