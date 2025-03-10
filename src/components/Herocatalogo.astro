@@ -1,124 +1,21 @@
 ---
+import '../styles/HeroCatalogo.css'
 ---
 
-<style is:inline>
-    .hero-section {
-          background-color: #F08427;
-          border-radius: 0 0 120px 0px;
-          color: white;
-          position: relative;
-          overflow: hidden;
-          margin-top: 69px;
-      }
-      
-      .hero-title {
-          font-size: 2.8rem;
-          font-weight: 700;
-          line-height: 1.2;
-          margin-bottom: 15px;
-      }
-      
-      .hero-description {
-          font-size: 1rem;
-          margin-bottom: 30px;
-          max-width: 500px;
-      }
-      
-      .btn-buy-now {
-          background-color: white;
-          color: #333;
-          border-radius: 30px;
-          padding: 10px 35px;
-          font-weight: 600;
-          border: none;
-          transition: all 0.3s ease;
-      }
-      
-      .btn-buy-now:hover {
-          background-color: #f0f0f0;
-          transform: translateY(-2px);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-      
-      .headset-container {
-          position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
-      
-      .headset-image {
-          max-width: 100%;
-          height: auto;
-          position: relative;
-          z-index: 2;
-      }
-      
-      /* Efecto luminoso detrás del headset */
-      .headset-glow {
-          position: absolute;
-          width: 80%;
-          height: 80%;
-          background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 70%);
-          border-radius: 50%;
-          z-index: 1;
-          filter: blur(20px);
-      }
-      
-      /* Estilos para responsividad */
-      @media (max-width: 992px) {
-          .hero-section {
-            border-radius: 0 0 120px 0px;
-              padding: 60px 0;
-          }
-          
-          .hero-title {
-              font-size: 2.2rem;
-          }
-      }
-      
-      @media (max-width: 768px) {
-          .hero-title {
-              font-size: 2rem;
-          }
-          
-          .hero-section {
-              padding: 40px 0;
-              border-radius: 0 0 120px 0px;
-          }
-          
-          .headset-container {
-              margin-top: 30px;
-          }
-      }
-      
-      @media (max-width: 576px) {
-          .hero-title {
-              font-size: 1.8rem;
-          }
-          
-          .hero-section {
-              padding: 30px 0;
-              border-radius: 0 0 120px 0px;
-          }
-      }
-</style>
-
 <section class="container hero-section">
- 
-      <div class="row align-items-center">
-          <div class="col-lg-6 col-md-6">
-              <div class="px-4 px-md-3 px-lg-4">
-                  <h1 class="hero-title">Discover The Brand<br>New Headset In Market</h1>
-                  <p class="hero-description">BeeSound is the one of the world's largest online shops that providing over 1500 headphones for its costumers from over 80 countries</p>
-                  <button class="btn btn-buy-now">Buy Now</button>
-              </div>
-          </div>
-          <div class="col-lg-6 col-md-6">
-              <div class="headset-container">
-                  <div class="headset-glow"></div>
-                  <img src="/images/herocatalogo.png" alt="Headphones" class="headset-image">
-              </div>
-          </div>
+  <div class="row align-items-center">
+    <div class="col-lg-6 col-md-6">
+      <div class="px-4 px-md-3 px-lg-4">
+        <h1 class="hero-title">Descubre la Agencia<br>de Merchandising Compipro</h1>
+        <p class="hero-description">Compipro es una de las agencias de merchandising más confiables del Perú, proporcionando más de 10,000 productos personalizados para sus miles de clientes.</p>
+        <button class="btn btn-buy-now">Conócenos</button>
       </div>
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <div class="headset-container">
+        <div class="headset-glow"></div>
+        <img src="/images/herocatalogo.png" alt="Productos de Merchandising" class="headset-image">
+      </div>
+    </div>
+  </div>
 </section>

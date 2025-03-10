@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(initializeHeroCarousel, 100); // Reintentar en 100ms
       return;
     }
-
+    
     const images = [
       {
         src: "/images/imagenhero2.webp",
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let index = 0;
 
     function changeImage() {
-      heroImage.style.opacity = 0; // Oculta la imagen
+      heroImage.style.opacity = "0"; // Oculta la imagen
       setTimeout(() => {
         index = (index + 1) % images.length; // Cicla entre imágenes
         heroImage.src = images[index].src;

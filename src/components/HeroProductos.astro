@@ -1,5 +1,7 @@
 ---
 import '../styles/HeroProductos.css'
+
+const catalogo = 'https://compipro.net/documentos/catalogo-compipro/Catalogo_Compipro.pdf'
 ---
 
 <section class="hero">
@@ -7,7 +9,11 @@ import '../styles/HeroProductos.css'
         <span class="discount-badge">30% de descuento</span>
         <h1>Articulos Importados<br>Get it ordered</h1>
         <p>Save time, skip the lines. We've got you covered.</p>
-        <button class="cta-button">Shop Now</button>
+        <button class="cta-button">
+            <a href={catalogo} target="_blank" rel="noopener noreferrer">
+                Catálogo
+            </a>
+        </button>
     </div>
     <div class="hero-image">
         <img src="https://i.imgur.com/UxY4IR7.png" alt="Corporate Gifts Collection">

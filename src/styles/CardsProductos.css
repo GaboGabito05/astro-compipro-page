@@ -59,7 +59,12 @@
 }
 
 .quote-button:hover {
-    background-color: #ff7e15;
+    background-color: #cc6f23;
+}
+
+.quote-button a{
+    color: white;
+    text-decoration: none;
 }
 
 /* Responsive Media Queries for Product Cards */

@@ -1,0 +1,193 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 81px 122px 81px 122px;
+    background-color: #000;
+    color: white;
+    margin-top: 100px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.button-primary-with {
+    padding: 12px 40px;
+    background-color: white;
+    color: black;
+    border-radius: 60px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logo-compipro-wrapper img {
+    width: 240px;
+    height: auto;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin: 30px 0;
+}
+
+.footer-widgets {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+.widget {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subtitulo-footer {
+    width: 126px;
+    font-family: var(--bold-16px-font-family);
+    font-weight: var(--bold-16px-font-weight);
+    color: #ffffff;
+    font-size: var(--bold-16px-font-size);
+    letter-spacing: var(--bold-16px-letter-spacing);
+    line-height: var(--bold-16px-line-height);
+    font-style: var(--bold-16px-font-style);
+}
+
+
+.descripcion-footer {
+    color: #ffffff;
+    font-family: var(--regular-13px-font-family);
+    font-style: var(--regular-13px-font-style);
+    font-weight: var(--regular-13px-font-weight);
+    letter-spacing: var(--regular-13px-letter-spacing);
+    line-height: var(--regular-13px-line-height);
+    font-size: var(--regular-13px-font-size);
+}
+
+.link-footer {
+    color: #ffffff;
+    text-decoration: underline;
+    font-family: var(--regular-13px-font-family);
+    font-style: var(--regular-13px-font-style);
+    font-weight: var(--regular-13px-font-weight);
+    letter-spacing: var(--regular-13px-letter-spacing);
+    line-height: var(--regular-13px-line-height);
+    font-size: var(--regular-13px-font-size);
+}
+
+.seccions-footer {
+    font-family: "Plus Jakarta Sans-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 2.5;
+}
+
+
+
+.frame-2 {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+}
+
+i {
+    color: white;
+    /* Color de los iconos */
+    font-size: 30px;
+    /* Tamaño */
+    margin: 10px;
+    /* Espaciado */
+    transition: color 0.3s ease;
+    /* Efecto suave */
+}
+
+i:hover {
+    color: #f39c12;
+    /* Cambia de color al pasar el mouse */
+}
+
+.link-item {
+    display: block; /* Hace que cada enlace esté en su propia línea */
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit; /* Mantiene el color del texto original */
+    margin-bottom: 5px; /* Espaciado entre enlaces */
+}
+
+.link-item:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+    color: #007bff; /* Cambia el color al hacer hover (opcional) */
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        padding: 60px 80px;
+    }
+
+    .logo-compipro-wrapper img {
+        width: 200px;
+    }
+
+    .button-primary-with {
+        padding: 10px 30px;
+    }
+
+    .footer-widgets {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 40px;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-widgets {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .frame-2 {
+        justify-content: center;
+    }
+
+    .subtitulo-footer {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 20px 20px;
+    }
+
+    .logo-compipro-wrapper img {
+        width: 150px;
+    }
+
+    .button-primary-with {
+        padding: 8px 20px;
+    }
+
+    .footer-widgets {
+        gap: 10px;
+    }
+
+    .subtitulo-footer {
+        text-align: center;
+    }
+}

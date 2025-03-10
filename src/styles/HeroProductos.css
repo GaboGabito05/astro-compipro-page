@@ -57,6 +57,11 @@
     background-color: #ad5401;
 }
 
+.cta-button a{
+    color: white;
+    text-decoration: none;
+}
+
 .hero-image {
     flex: 0 1 50%;
     display: flex;

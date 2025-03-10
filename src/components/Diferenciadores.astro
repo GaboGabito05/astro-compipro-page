@@ -1,95 +1,42 @@
 ---
+import '../styles/Diferenciadores.css';
 
+const diferenciadores = [
+  {
+    src: '/images/iconodeferenciador1.webp',
+    alt: 'Merchandising',
+    text: 'Más de 10 mil productos para <span class="negrita">merchandising</span>'
+  },
+  {
+    src: '/images/iconodeferenciador2.webp',
+    alt: 'Pagos Seguros',
+    text: 'Pagos y envíos <span class="negrita">seguros</span>'
+  },
+  {
+    src: '/images/iconodeferenciador3.webp',
+    alt: 'Garantía',
+    text: 'Proveedores de <span class="negrita">garantía</span>'
+  }
+];
 ---
 
-<style is:inline>
-    .text-seccion {
-    max-width: 1062px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 18px;
-}
-
-.contenedor {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 0px 10%;
-    width: 100%;
-}
-
-.circle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 32px;
-    border-radius: 16px;
-    gap: 20px;
-}
-
-.icono {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-}
-
-.texto {
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    color: #4b5563;
-    width: 100%;
-    max-width: 190px;
-}
-
-.negrita {
-    font-weight: 700;
-}
-
-@media (max-width: 768px) {
-    .contenedor {
-        grid-template-columns: 1fr;
-    }
-
-    .circle {
-        padding: 16px;
-    }
-
-    .texto {
-        font-size: 14px;
-    }
-}
-</style>
-
 <div class="container-fluid d-flex justify-content-center align-items-center"
-        style="background-color: #737375; padding: 10px; margin-top: 20px; height: 102px;">
-        <p class="mb-0 text-white text-center text-seccion">
-            Todos nuestros artículos son personalizables para incluir el logotipo de tu empresa, tu eslogan, los nombres
-            de tus empleados, clientes, socios u otra personalización.
-        </p>
-    </div>
-    <section class="container my-5">
-        <div class="row justify-content-center text-center">
-            <div class="col-md-4 d-flex flex-column align-items-center">
-                <div class="circle">
-                    <img class="icono" src="/images/iconodeferenciador1.webp" alt="Merchandising">
-                    <p class="texto">Más de 10 mil productos para <span class="negrita">merchandising</span></p>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex flex-column align-items-center">
-                <div class="circle">
-                    <img class="icono" src="/images/iconodeferenciador2.webp" alt="Pagos Seguros">
-                    <p class="texto">Pagos y envíos <span class="negrita">seguros</span></p>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex flex-column align-items-center">
-                <div class="circle">
-                    <img class="icono" src="/images/iconodeferenciador3.webp" alt="Garantía">
-                    <p class="texto">Proveedores de <span class="negrita">garantía</span></p>
-                </div>
-            </div>
+     style="background-color: #737375; padding: 10px; margin-top: 20px; height: 102px;">
+  <p class="mb-0 text-white text-center text-seccion">
+    Todos nuestros artículos son personalizables para incluir el logotipo de tu empresa, tu eslogan, los nombres
+    de tus empleados, clientes, socios u otra personalización.
+  </p>
+</div>
+
+<section class="container my-5">
+  <div class="row justify-content-center text-center">
+    {diferenciadores.map((diferenciador) => (
+      <div class="col-md-4 d-flex flex-column align-items-center">
+        <div class="circle">
+          <img class="icono" src={diferenciador.src} alt={diferenciador.alt} />
+          <p class="texto" set:html={diferenciador.text}></p>
         </div>
-    </section>
+      </div>
+    ))}
+  </div>
+</section>

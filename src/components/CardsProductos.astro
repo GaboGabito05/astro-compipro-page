@@ -1,48 +1,65 @@
 ---
-import '../styles/CardsProductos.css'
+import "../styles/CardsProductos.css";
 
-const image = 'https://s3-alpha-sig.figma.com/img/927c/f88e/91c79c85e85a6b9cd92b0d1b36ec9fd5?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YEUfY3UAh3k0Ivh9Tkd5D187oYTFYfiuYPuWP2H2eC7idyQzhZLxiePejtODsudS0fH-dk9Fq83658Te5FrGzrInbURjLOUJFevu4cK7ERFouIDsailDNNcoECS7LTww9if6hV4fv1AHViqpATTJvx5QAu0iV4IXgXbW2wTJva31kq8aGgraNQDoi9vq0sUwxdjMDTlsPrlT2Dr5POQQAW3Ks8aLDRCqVXCGfLjTgbmgub1o5oqeH~ROu8XzyjVtp3MbINSXjnlslLbz7wGxTuGiaVsu3FQCzCShKLG9i~h3AtiPNaBqRgUw~oXJ21wqXbU7RaInoBZIGzCdWWuCAA__'
+const productGroups = [
+  [
+    {
+      id: 1,
+      name: "Altavoz Bambú",
+      description: "Altavoz portátil ecológico con diseño moderno.",
+      image: "https://www.regalospublicitarios.com/64823-large_default/altavoz-bluetooth-bambu-3w-sound-bamboo.jpg",
+    },
+    {
+      id: 2,
+      name: "Power Bank",
+      description: "Batería externa de alta capacidad para dispositivos.",
+      image: "https://grupoficom.com/wp-content/uploads/2019/02/powerbank-merchandising-lima-peru-6.jpg",
+    },
+    {
+      id: 3,
+      name: "Set de Escritorio",
+      description: "Conjunto de portabolígrafos y organizador de escritorio.",
+      image: "https://mktideas.com.pe/wp-content/uploads/2022/10/11-GSPH-102A-set-de-escritorio-giratorio-mkt-ideas.png",
+    },
+  ],
+  [
+    {
+      id: 4,
+      name: "Cuadernos con Diseño",
+      description: "Cuadernos con diseño único y creativo.",
+      image: "https://imborrable.com/wp-content/uploads/2022/10/bodegon-memos-merchandising-cuadernos.jpg",
+    },
+    {
+      id: 5,
+      name: "Pack para Estudiantes",
+      description: "Pack completo de útiles escolares para estudiantes.",
+      image: "https://lh3.googleusercontent.com/proxy/gowK-S5i8QnsSreEXq5TTFheVOP0DcrNhILbMyBuvgOrwimDgp8zgDgyy2nTuTu07kZw9Bk6VDb0PL6vuzcMPGTPtNVN3mA4thhq0iNPNy6M7dPPg3g7pmGpbjISxtu-x1S9_9JkC68WNSJ6wymjh2Dr6D0xGJCz",
+    },
+    {
+      id: 6,
+      name: "Set de Gigantografias",
+      description: "Conjunto de gigantografías para publicidad.",
+      image: "https://www.gigantografiaswilson.com/wp-content/uploads/2020/02/imagen-de-portada-web-de-gigantografias-wilson.png",
+    },
+  ],
+];
 ---
 
 <section class="product-grid">
+  {productGroups.map((group) => (
     <div class="product-cards">
+      {group.map((product) => (
         <div class="product-card">
-            <img src={image} alt="Producto 1">
-            <h3>Altavoz Bambú</h3>
-            <p>Altavoz portátil ecológico con diseño moderno.</p>
-            <button class="quote-button">Cotizar</button>
+          <img src={product.image} alt={`Producto ${product.id}`} />
+          <h3>{product.name}</h3>
+          <p>{product.description}</p>
+          <button class="quote-button">
+            <a href="https://wa.me/973644878" target="_blank">
+              Cotizar
+            </a>
+          </button>
         </div>
-        <div class="product-card">
-            <img src={image} alt="Producto 2">
-            <h3>Power Bank</h3>
-            <p>Batería externa de alta capacidad para dispositivos.</p>
-            <button class="quote-button">Cotizar</button>
-        </div>
-        <div class="product-card">
-            <img src={image} alt="Producto 3">
-            <h3>Set de Escritorio</h3>
-            <p>Conjunto de portabolígrafos y organizador de escritorio.</p>
-            <button class="quote-button">Cotizar</button>
-        </div>
+      ))}
     </div>
-    <div class="product-cards">
-        <div class="product-card">
-            <img src={image} alt="Producto 1">
-            <h3>Altavoz Bambú</h3>
-            <p>Altavoz portátil ecológico con diseño moderno.</p>
-            <button class="quote-button">Cotizar</button>
-        </div>
-        <div class="product-card">
-            <img src={image} alt="Producto 2">
-            <h3>Power Bank</h3>
-            <p>Batería externa de alta capacidad para dispositivos.</p>
-            <button class="quote-button">Cotizar</button>
-        </div>
-        <div class="product-card">
-            <img src={image} alt="Producto 3">
-            <h3>Set de Escritorio</h3>
-            <p>Conjunto de portabolígrafos y organizador de escritorio.</p>
-            <button class="quote-button">Cotizar</button>
-        </div>
-    </div>
+  ))}
 </section>
