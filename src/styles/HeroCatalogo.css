@@ -61,6 +61,17 @@
     filter: blur(20px);
 }
 
+.link-conocenos{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.link-conocenos:hover {
+    color: #58555583;
+}
+
 /* Estilos para responsividad */
 @media (max-width: 992px) {
     .hero-section {
