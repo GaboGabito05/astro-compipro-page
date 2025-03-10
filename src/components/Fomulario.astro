@@ -5,35 +5,34 @@ import '../styles/Formulario.css'
 <section class="container contact-section">
     <h2 class="titulo">POTENCIAMOS TU CRECIMIENTO</h2>
     <div class="contact-container w-100 mt-4">
-
         <div class="orange-bg"></div>
         <div class="contact-form">
             <h4><strong>¿Solicita una <span class="text-success">cotización</span>?</strong></h4>
             <p>Puedes ponerte en contacto con nosotros en cualquier momento a través de <a
                     href="mailto:ventas@compipro.net" class="text-primary">ventas@compipro.net</a></p>
-            <form>
+            <form id="contactForm">
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Nombre de contacto">
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre de contacto">
                 </div>
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Calle">
+                    <input type="text" class="form-control" id="calle" placeholder="Calle">
                 </div>
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <input type="text" class="form-control" placeholder="Ciudad">
+                        <input type="text" class="form-control" id="ciudad" placeholder="Ciudad">
                     </div>
                     <div class="col-md-6 mb-3">
-                        <input type="text" class="form-control" placeholder="Código postal">
+                        <input type="text" class="form-control" id="codigoPostal" placeholder="Código postal">
                     </div>
                 </div>
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Teléfono de contacto">
+                    <input type="text" class="form-control" id="telefono" placeholder="Teléfono de contacto">
                 </div>
                 <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Correo electrónico">
+                    <input type="email" class="form-control" id="correo" placeholder="Correo electrónico">
                 </div>
                 <div class="mb-3">
-                    <textarea class="form-control" rows="3" placeholder="Háblenos de su idea"></textarea>
+                    <textarea class="form-control" id="idea" rows="3" placeholder="Háblenos de su idea"></textarea>
                 </div>
                 <div class="mb-3">
                     <input type="file" class="form-control">
