@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const idea = document.getElementById("idea").value;
 
     const mensaje = `Hola, me gustaría solicitar una cotización. Aquí están mis detalles:
-      - Nombre de contacto: ${nombre}
-      - Calle: ${calle}
-      - Ciudad: ${ciudad}
-      - Código postal: ${codigoPostal}
-      - Teléfono de contacto: ${telefono}
-      - Correo electrónico: ${correo}
-      - Idea: ${idea}`;
+        - Nombre de contacto: ${nombre}
+        - Calle: ${calle}
+        - Ciudad: ${ciudad}
+        - Código postal: ${codigoPostal}
+        - Teléfono de contacto: ${telefono}
+        - Correo electrónico: ${correo}
+        - Idea: ${idea}`;
 
     const whatsappUrl = `https://wa.me/973644878?text=${encodeURIComponent(
       mensaje
