@@ -1,64 +1,66 @@
 ---
 import '../../styles/Productos.css';
 
-const catalogo = 'https://compipro.net/documentos/catalogo-compipro/Catalogo_Compipro.pdf'
+const productosNormales = [
+  { nombre: "Artículos tecnológicos", descripcion: "Multipuertos USB, power bank, parlantes, etc.", src: "/productos/img1.jpg" },
+  { nombre: "Artículos ecológicos", descripcion: "Bolsas, libretas, lapiceros, mochilas, etc.", src: "/productos/img2.jpg" },
+  { nombre: "Artículos impresos", descripcion: "Calendarios, empaques, cuadernos, folders, etc.", src: "/productos/img3.jpg" },
+  { nombre: "Artículos de oficina", descripcion: "Articulos de Oficina como cuadernos, lapiceros, etc.", src: "/productos/img4.jpg" },
+  { nombre: "Artículos promocionales", descripcion: "Pines, cuadernos, llaveros, bolígrafos, agendas, etc.", src: "/productos/img5.jpg" },
+  { nombre: "Artículos textil", descripcion: "Polos, casacas, uniformes, gorras, mochilas, bolsos, etc.", src: "/productos/img6.webp" },
+  { nombre: "Publicidad exterior", descripcion: "Banner, dispensadores, mochila móvil, gigantografías, etc.", src: "/productos/img7.jpg" },
+  { nombre: "Tazas, mug, drink wares", descripcion: "Tazas, tazas mágicas, taza cónica, etc.", src: "/productos/img8.webp" }
+];
 
-const products = [
-  {
-    name: "Artículos Importados",
-    price: "$599",
-    image: "/images/tecnologico.webp",
-    alt: "Artículos Importados"
-  },
-  {
-    name: "Artículos Corporativos",
-    price: "$1,449",
-    image: "/images/regalosCorporativos.webp",
-    alt: "Artículos Corporativos"
-  },
-  {
-    name: "Artículos Ecológicos",
-    price: "$739",
-    image: "/images/ecologico.webp",
-    alt: "Artículos Ecológicos"
-  },
-  {
-    name: "Artículos de Imprenta",
-    price: "$186",
-    image: "/images/papeleria.webp",
-    alt: "Artículos de Imprenta"
-  },
-  {
-    name: "Artículos Textil",
-    price: "$98",
-    image: "/images/textileria.webp",
-    alt: "Artículos Textil"
-  },
-  {
-    name: "Tazas Publicitarias",
-    price: "$739",
-    image: "/images/tazas-publicitarias.webp",
-    alt: "Tazas Publicitarias"
-  }
+const productosExtra = [
+  { nombre: "Línea hombre", descripcion: "Mochilas, mugs, gorros, porta celulares, parlantes, etc.", src: "/productos/img9.webp" },
+  { nombre: "Línea mujer", descripcion: "Bolsa para viaje, portacelular, neceser, termos, bolsos, etc.", src: "/productos/img10.webp" },
+  { nombre: "Línea niño", descripcion: "Set de juegos, animales de mochila, alcancillas, peluches.", src: "/productos/img11.webp" },
+  { nombre: "Artículos de madera", descripcion: "Jenga, caja pisquera, portanotas, posavasos, etc.", src: "/productos/img12.webp" },
+  { nombre: "Línea deportiva", descripcion: "Mochilas, mugs, gorros, porta celulares, parlantes, etc.", src: "/productos/img13.webp" },
+  { nombre: "Línea mascotas", descripcion: "Bolsa para viaje, portacelular, neceser, termos, bolsos, etc.", src: "/productos/img14.webp" },
+  { nombre: "Línea peluches", descripcion: "Set de juegos, animales de mochila, alcancillas, peluches.", src: "/productos/img15.webp" },
+  { nombre: "Línea lúdica", descripcion: "Jenga, caja pisquera, portanotas, posavasos, etc.", src: "/productos/img16.webp" },
+  { nombre: "Línea calendarios", descripcion: "Mochilas, mugs, gorros, porta celulares, parlantes, etc.", src: "/productos/img17.webp" },
+  { nombre: "Línea cuero", descripcion: "Bolsa para viaje, portacelular, neceser, termos, bolsos, etc.", src: "/productos/img18.webp" },
+  { nombre: "Línea verano", descripcion: "Set de juegos, animales de mochila, alcancillas, peluches.", src: "/productos/img19.webp" },
+  { nombre: "Packs corporativos", descripcion: "Set vinos, set herramientas, set cocinero, set de lapiceros, etc.", src: "/productos/img20.webp" },
+  { nombre: "Bolsas y empaques", descripcion: "Mochilas, mugs, gorros, porta celulares, parlantes, etc.", src: "/productos/img21.webp" },
+  { nombre: "Bolsas, maleta y mochilas", descripcion: "Bolsa para viaje, portacelular, neceser, termos, bolsos, etc.", src: "/productos/img22.webp" },
+  { nombre: "Bolsas ecoferias", descripcion: "Set vinos, set herramientas, set cocinero, set de lapiceros, etc.", src: "/productos/img23.webp" },
+  { nombre: "Cuaderno y agendas", descripcion: "Set de juegos, animales de mochila, alcancillas, peluches.", src: "/productos/img24.webp" },
+  { nombre: "Cerámicos", descripcion: "Mochilas, mugs, gorros, porta celulares, parlantes, etc.", src: "/productos/img25.webp" },
+  { nombre: "Premium", descripcion: "Bolsa para viaje, portacelular, neceser, termos, bolsos, etc.", src: "/productos/img26.webp" },
+  { nombre: "Libretas y post it", descripcion: "Set vinos, set herramientas, set cocinero, set de lapiceros, etc.", src: "/productos/img27.webp" },
+  { nombre: "Cuaderno y agendas", descripcion: "Set de juegos, animales de mochila, alcancillas, peluches.", src: "/productos/img28.webp" },
+  { nombre: "Cerámicos", descripcion: "Mochilas, mugs, gorros, porta celulares, parlantes, etc.", src: "/productos/img29.webp" },
+  { nombre: "Premium", descripcion: "Bolsa para viaje, portacelular, neceser, termos, bolsos, etc.", src: "/productos/img30.webp" }
 ];
 ---
 
-<div class="container my-5">
-  <h2 class="text-center titulo">NUESTROS PRODUCTOS</h2>
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-4">
-    {products.map((product) => (
-      <div class="col">
-        <div class="card text-center">
-          <img src={product.image} alt={product.alt} />
-          <div class="card-body">
-            <h5 class="card-title">{product.name}</h5>
-            <p class="fw-bold">{product.price}</p>
-          </div>
+<section class="products-section">
+  <h1>Nuestros Productos</h1>
+  <div class="products-grid">
+    {productosNormales.map(producto => (
+      <div class="product-card">
+        <div class="product-image">
+          <img src={producto.src} alt={producto.nombre} class="placeholder-img" />
         </div>
+        <h3>{producto.nombre}</h3>
+        <p>{producto.descripcion}</p>
+        <button class="request-btn">Solicitar</button>
+      </div>
+    ))}
+    {productosExtra.map(producto => (
+      <div class="product-card extra-product">
+        <div class="product-image">
+          <img src={producto.src} alt={producto.nombre} class="placeholder-img" />
+        </div>
+        <h3>{producto.nombre}</h3>
+        <p>{producto.descripcion}</p>
+        <button class="request-btn">Solicitar</button>
       </div>
     ))}
   </div>
-  <div class="text-center mt-4">
-    <a href={catalogo} target="_blank" class="btn btn-custom">Ver más artículos +</a>
-  </div>
-</div>
+  <button id="loadMoreBtn" class="load-more-btn">Ver más productos</button>
+</section>
