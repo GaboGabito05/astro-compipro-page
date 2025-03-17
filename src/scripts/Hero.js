@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const heroDescription = document.getElementById("heroDescription");
 
     if (!heroImage || !heroTitle || !heroDescription) {
-      console.warn("No se encontraron los elementos del hero. Reintentando...");
+      //console.warn("No se encontraron los elementos del hero. Reintentando...");
       setTimeout(initializeHeroCarousel, 100); // Reintentar en 100ms
       return;
     }

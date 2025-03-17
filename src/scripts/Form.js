@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("HTMLDocument", function () {
   const form = document.getElementById("contactForm");
 
   form.addEventListener("submit", function (event) {

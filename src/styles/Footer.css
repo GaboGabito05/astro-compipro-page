@@ -3,7 +3,7 @@
     flex-direction: column;
     padding: 81px 122px 81px 122px;
     background-color: #000;
-    color: white;
+    color: #fff;
     margin-top: 100px;
 }
 
@@ -60,7 +60,6 @@
     font-style: var(--bold-16px-font-style);
 }
 
-
 .descripcion-footer {
     color: #ffffff;
     font-family: var(--regular-13px-font-family);
@@ -91,8 +90,6 @@
     line-height: 2.5;
 }
 
-
-
 .frame-2 {
     display: flex;
     gap: 15px;
@@ -116,15 +113,21 @@ i:hover {
 }
 
 .link-item {
-    display: block; /* Hace que cada enlace esté en su propia línea */
-    text-decoration: none; /* Quita el subrayado */
-    color: inherit; /* Mantiene el color del texto original */
-    margin-bottom: 5px; /* Espaciado entre enlaces */
+    display: block;
+    /* Hace que cada enlace esté en su propia línea */
+    text-decoration: none;
+    /* Quita el subrayado */
+    color: inherit;
+    /* Mantiene el color del texto original */
+    margin-bottom: 5px;
+    /* Espaciado entre enlaces */
 }
 
 .link-item:hover {
-    text-decoration: underline; /* Subrayado al pasar el mouse */
-    color: #007bff; /* Cambia el color al hacer hover (opcional) */
+    text-decoration: underline;
+    /* Subrayado al pasar el mouse */
+    color: #007bff;
+    /* Cambia el color al hacer hover (opcional) */
 }
 
 @media (max-width: 1024px) {

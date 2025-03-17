@@ -12,12 +12,15 @@
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 15px;
+    color: #fff;
+    text-align: left;
 }
 
 .hero-description {
     font-size: 1rem;
     margin-bottom: 30px;
     max-width: 500px;
+    color: #fff;
 }
 
 .btn-buy-now {
