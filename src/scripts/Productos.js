@@ -1,11 +1,3 @@
-// Existing button functionality
-document.querySelectorAll('.request-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        const productName = this.parentElement.querySelector('h3').textContent;
-        alert(`Has solicitado: ${productName}`);
-    });
-});
-
 // Enhanced Load more functionality with smoother animations
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 const extraProducts = document.querySelectorAll('.extra-product');
