@@ -456,12 +456,6 @@ const faqs = [
   document.getElementById('cotizacionForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Disable submit button and show loading state
-    const submitBtn = this.querySelector('.submit-btn');
-    const originalText = submitBtn.innerHTML;
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span>Enviando...</span>';
-    
     // Obtener los valores del formulario
     const formData = {
         empresa: document.getElementById('empresa').value,
@@ -471,31 +465,19 @@ const faqs = [
         telefono: document.getElementById('telefono').value,
         mensaje: document.getElementById('mensaje').value
     };
-    
-    // Simulate API call
-    setTimeout(() => {
-        console.log('Datos del formulario:', formData);
-        
-        // Show success message
-        const successMessage = document.createElement('div');
-        successMessage.className = 'success-message animate__animated animate__fadeIn';
-        successMessage.innerHTML = `
-            <svg viewBox="0 0 24 24" width="24" height="24">
-                <path fill="#4CAF50" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-            </svg>
-            <span>¡Formulario enviado con éxito!</span>
-        `;
-        
-        this.appendChild(successMessage);
-        
-        // Reset form and button
-        this.reset();
-        setTimeout(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalText;
-            successMessage.remove();
-        }, 3000);
-    }, 1500);
+
+    // Crear el mensaje para WhatsApp
+    const whatsappMessage = `Hola, estoy interesado en sus productos. Aquí están mis datos:
+- Empresa: ${formData.empresa}
+- Nombre: ${formData.nombre} ${formData.apellido}
+- Email: ${formData.email}
+- Teléfono: ${formData.telefono}
+- Mensaje: ${formData.mensaje}`;
+
+    // Redirigir a WhatsApp
+    const whatsappNumber = "973644878";
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.location.href = whatsappLink;
 });
 
 // Add floating label effect
