@@ -1,17 +1,38 @@
 ---
-import { getCategoria, getProductosPorCategoria, getCategoriaPaths } from "../scripts/producto";
 import Layout from '../layouts/Layout.astro';
 
 export async function getStaticPaths() {
-  const categorias = getCategoriaPaths();
-  return categorias.map((categoria) => ({
-    params: { producto: categoria.id },
-  }));
+  const apiUrl = "https://go-compipro-api-production.up.railway.app/api/data";
+  let paths = [];
+
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    paths = data.map((categoria) => ({
+      params: { producto: categoria.id },
+    }));
+  } catch (error) {
+    console.error("Error fetching data for static paths:", error);
+  }
+
+  return paths; // Return the array directly
 }
 
 const { producto } = Astro.params;
-const catData = getCategoria(producto);
-const productos = getProductosPorCategoria(producto);
+
+// Fetch data from the API
+const apiUrl = "https://go-compipro-api-production.up.railway.app/api/data";
+let catData = null;
+let productos = [];
+
+try {
+  const response = await fetch(apiUrl);
+  const data = await response.json();
+  catData = data.find((categoria) => categoria.id === producto);
+  productos = catData ? catData.productos : [];
+} catch (error) {
+  console.error("Error fetching data:", error);
+}
 
 const faqs = [
   {
