@@ -108,6 +108,9 @@
     transition: background-color 0.3s ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .request-btn::after {
@@ -146,6 +149,9 @@
     position: relative;
     overflow: hidden;
     animation: bounceIn 0.8s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes bounceIn {
